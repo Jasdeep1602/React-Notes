@@ -1,0 +1,95 @@
+1.Bundler line webpack,vite,parcel. packages app propeerly so that it can be pushed to production.
+These are installed as dev dependencies -D.
+^ caret: minor versions(more safe).
+~ tilde :it will update only if a major version comes.
+
+2.package-lock.json keeps a track of exact version of dependencies and sub-dependencies installed.
+
+3.A node modules file is also made.It is a database of a the packages installed and dependencies.
+  This file is very big so we dont want to send it to production or git.
+  So make a .gitignore file and write /node_modules in it.
+
+4.npm: is a repository for all the packages.Manages all the packages.
+
+5.installing it manually 'npm init'.
+
+6.package.json is a config for npm.It is a metadata of all the dependencies installed
+
+7.package nd dependencies are the same thing.npm manages all that in package.json
+
+8.package.json and package-lock.json keeps a note of which all dependencies a project needs or are installed.
+
+9.both of these are important to regenerate the nodemodules.
+  Just npm i and it will be recreated.
+
+10. 2 typed of dependecies
+     1.dev:  required in development and tesing phase
+     2.normal:	project directly depend on for its runtime functionality and is essensial for proper working of app
+
+11.npm installs a package and manages it.
+
+12.npx executes a package temporarily without installing it.
+
+13.npx parcel source file(like index.html)    to ignite the app (server running localhost link will be available).
+
+14.Parcel:
+      development build 
+      hosts it on local host 
+      a dist folder will be made
+      HMR=Hot Module Replacement
+      Image Optimize
+      Minification
+      Bundling
+      Compress	
+      Consistent Hashing
+      Code spliting
+      Differential Bundling-support older browers
+      Diagnostics
+      Error handling
+      also gives HTTPs
+      Tree Shaking-remove unused code
+      Different dev and prod bundles	
+
+15.Parcel does HMR means when changes are made and saved, our page automatically refreshes and updates it by using file watching algo.
+   and it caches it so that the next dev build takes less and less time.
+   caches it in parcl-cache file
+
+16.Install react and react-dom as a package
+   npm i react
+   npm i react-dom
+
+17.now to make sure react works we.....
+
+18.Then we need to import React from "react" so that our functions or properties using React works.
+
+19.React is a object we import from "react" which is a dependency installed in kept in node_modules.
+
+20.same for import ReactDOM from 'react-dom/client'
+
+21.still the server will not run as normal browser scripts cannot have imports or exports.
+
+22.This is because index.html is treating   <script src="./App.js"></script>  this as a normal js browser script .
+
+23.we need to tell the browser that this is a module by adding a type='module' in that script.
+
+24.when making a prod build we need to first remove the entry point from package.json
+
+25.then use npx parcel build index.html(entry point).
+
+26.then all the build files will be made in dist folder.
+
+27.dist and parcel-cache file can be regenerated.
+just npx parcel index.html
+ and it is recreated.
+So we put it in .gitignore
+
+28.Making app compatible for other version browsers by using brower list in node_modules.
+   In package.json add:
+ "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions"
+  ]
+
+29.just write "last 2 versions" for overall browers.
+
+30.adding this will add some extra code in your system. 

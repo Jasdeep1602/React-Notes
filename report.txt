@@ -1,0 +1,29 @@
+-Building an App by using all React Concepts I have learned like:
+-Fetching  API.
+-Making API calls using AXIOS.
+-Have used props and dynamic card rendering which I previously learned.
+-Hooks are also used(useState and useEffect).
+-Learning optional Chaining and will use it in the project soon.
+-Learned about Conditional Rendering.
+-Got familiar with Shimmer UI and will implement it soon.
+-Learned About CORS errors and how to resolve it.
+-By which I was able to fetch swiggy's live api. 
+-All my progress can be seen on my github repository.
+-https://github.com/Jasdeep1602/React
+
+
+
+
+
+
+-Filtering the data and rendered the component according to condition.
+-Learned postman to test the apis
+-Adding a cart Component to the project.
+-Optional chaining and shimmer UI done.
+-Having some issues drilling props and will fix it soon.
+-For that I will also start Learning redux toolkit
+-And will try to make the Cart Component more functional.
+
+
+
+

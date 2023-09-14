@@ -1,0 +1,30 @@
+1.2 types of exports 
+    -default
+    -named for exporting multiple funcs
+    -export func......
+    -named exports can be imported by using {func,.....}
+
+2.Event Handlers
+  1.onClick={()=>{}}
+
+
+3.Hooks
+  -import {useState} from 'react'
+
+  1.useState
+    -whenever state variable is changed,the component it is part of will be rerendered and        updated.
+    -means it will triggers reconciliation cycle.  
+    -maintains state is component.
+    -const[state,setState]=useState(defaultValue(state))
+    -state variable is received in an array.
+    -whenever a state variable changes,react rerenders the component.
+    -keeps UI layer in sync with data layer.
+    -this is DOM manipulation.
+
+4.Reconciliation Algo(React Fiber)
+  -
+  -Diff Algo
+  -react works on VDOM instead of DOM.
+  -finds different between old nd new VDOM on any change made in state.
+  -then update the actual DOM on every render cycle.
+  -VDOM is actually a object.

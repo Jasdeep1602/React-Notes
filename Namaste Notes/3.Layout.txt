@@ -1,0 +1,34 @@
+1.Scripts
+  -npx parcel index.html can be shortened.
+  -go to scripts is package.json
+  -"start":"parcel index.html" for dev
+  -"build":"parcel build index.html" for prod
+  -now just npm run start or npm start to achieve dev
+
+2.JSX 
+  -makes easier to create react elements.
+  -JSX is not a part of react.
+  -mixture of HTML and JS.
+  -its not HTML, it is like HTML.
+  -It isnot pure JS.
+  -Bundler like parcel transpile JSX to JS(React.createElement) through Babel.
+  -So that JS Engine and React can understand it.
+  -const jsxHeading = <h1 id='heading'>Hello</h1>
+  -attributes are in camel case.
+  -code needs to wrapped inside () if it is more that one line.
+  -{} inside these you can write any JS expression.
+
+3.React Element
+  -const heading=()
+  -this can be called in JSX like {heading}
+  -
+
+
+4.React Components
+
+  (A)Function
+     -const Heading=()=>{ return}
+     -First letter of the F.C component name always uppercase.
+     -returns a react element.
+     -render it like <Functional Component/> or <FC></FC> or {FC()} .
+     -Component inside another Component is COmponent Composition.

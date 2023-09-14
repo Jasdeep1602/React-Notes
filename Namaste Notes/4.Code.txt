@@ -1,0 +1,34 @@
+1.Dynamic Component
+  -Passing different data to same component.
+  -Props(Properties) or arguments or destructure.
+  -Using props we can dynamically pass some data to the component.
+  -<FC name='' age=''/>
+  -Now where the FC code is write
+  -const FC=(props)=>{}
+  -this is how props are passed.
+  -Props is an object.
+  -now just access it
+  -const FC=(props)=>{return({props.name})}
+
+  -Destructuring
+  -const FC=({name,age})=>{return({name})}
+
+2.If we have a lot of props
+  -<FC name='' age='' ........../>
+  -This can be a problem.
+  -We will make a object for the properties. Let..
+  -const data={name,age,.......}
+  -Then pass it as
+  -<FC data={data}/>
+  -Then access it like 
+  -const FC=(props)=>{return({props.data.name})}
+
+  -map((value,key)=>{return..})
+  -If properties is a array of objects then..
+  -props.data.map
+  
+
+3.Config Driven UI
+  -Controlling UI using Config data rather than the hard coded appbase.
+  -UI is customized using this as maybe a different UI could be needed for different customer or             regions.
+  -diferent data maybe needed for different regions.

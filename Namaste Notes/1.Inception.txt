@@ -1,0 +1,93 @@
+1.cross origin
+
+In React, "cross-origin" refers to interactions or requests made between different domains or origins on the web. When a web application is loaded from one domain (origin) and tries to make requests to resources (like APIs or assets) on a different domain (origin), it is considered a cross-origin request. These requests are subject to certain security restrictions enforced by web browsers to prevent potential security vulnerabilities, such as Cross-Site Request Forgery (CSRF) or unauthorized data access.
+
+Cross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers to control and manage cross-origin requests. CORS defines a set of HTTP headers that both the client (React application) and the server (the external resource being accessed) can use to determine whether cross-origin requests should be allowed or denied.
+
+Here are some key points about cross-origin in React:
+
+Same-Origin Policy: By default, web browsers follow the Same-Origin Policy, which restricts web pages from making requests to a different domain than the one from which the page originated. This policy is in place for security reasons.
+
+CORS Headers: When you make a cross-origin request from a React application, the server hosting the resource you're trying to access must include specific CORS headers in its response. These headers indicate whether the request is allowed and under what conditions.
+
+Options for Handling Cross-Origin Requests: React applications can handle cross-origin requests in various ways, including making use of browser features like the Fetch API or Axios, and ensuring that the server you're making requests to supports CORS.
+
+Proxy Servers: In some cases, you might encounter CORS issues when trying to access a resource from a different domain. To address this, you can set up a server-side proxy to forward requests to the external resource. The React application can then make requests to the proxy server, which has the same origin as your React app, effectively bypassing CORS restrictions.
+
+
+2.cdn links
+
+Content Delivery Network (CDN) links refer to URLs or links that point to resources hosted on a CDN. CDNs are distributed networks of servers located in multiple geographic locations. They are designed to deliver web content, such as images, stylesheets, JavaScript files, and other assets, more efficiently and quickly to end-users by reducing latency and distributing the load.
+
+CDN links are typically used to serve static assets, and they offer several advantages for web developers and website owners:
+
+Improved Performance: CDNs store copies of your website's assets on servers strategically located around the world. When a user requests a resource, the CDN serves it from the nearest server, reducing the time it takes for the content to load.
+
+Reduced Server Load: Offloading the delivery of static assets to a CDN reduces the load on your web server, which can help improve the overall performance and reliability of your website.
+
+Enhanced Security: Some CDNs offer security features like DDoS protection, web application firewalls (WAFs), and SSL/TLS encryption, helping to safeguard your website from various threats.
+
+Scalability: CDNs are designed to handle traffic spikes and high demand. They can automatically scale to accommodate increased traffic, ensuring a smooth user experience during traffic surges.
+
+Here are common types of assets served through CDN links:
+
+Images: CDN links are often used for images, including photos, icons, and other visual elements on a website.
+
+Stylesheets: CSS files can be served through CDNs, making it faster for users to load and render web pages.
+
+JavaScript Libraries: Popular JavaScript libraries and frameworks like jQuery, React, or Bootstrap can be loaded from CDN links to reduce the initial load time of your web application.
+
+Fonts: Web fonts are often hosted on CDNs to ensure consistent and fast loading across various devices and browsers.
+
+Videos: CDNs can also host video content, providing efficient video streaming and delivery.
+
+3.Ways to inject react
+
+Create React App (CRA):
+
+React in HTML with CDN:react code in imporrted to html 
+
+You can include React and ReactDOM directly in your HTML file using CDN links.
+Example:
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script> main react code
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script  to manipulate Dom,acts as a bridge btw react nd brower.
+
+
+4. <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./App.js"></script>
+  </body>
+
+// React.createElement('div',{id:},Child)  
+
+//    <div id='parent'>
+//     <div id='child'>
+//         <h1>I am h1</h1>
+//         <h2>I am h2</h2>
+//     </div>
+// </div>
+
+// ReactElement(object) => HTML(browser Understands)
+// render converts parent to html
+// everything inside of root willbe replaced not appended with parent element
+
+const parent = React.createElement(
+  'div',
+  { id: 'parent' },
+  React.createElement('div', { id: 'child' }, [
+    React.createElement('h1', {}, 'I am h1'),
+    React.createElement('h2', {}, 'I am h2'),
+  ])
+)
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(parent)
+
+

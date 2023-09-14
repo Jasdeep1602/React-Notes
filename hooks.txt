@@ -1,0 +1,24 @@
+1.used for website optimization.
+2.usememo caches the result or value. 
+3.usecallback caches the whole function.
+  used so that a function does not impact another function when it is slow.
+  unwanted function are called that slow down the rest of the  functions. 
+
+
+4.useeffect bring a sideeffect when for example a state is changed.
+
+5.useref is basically to refer the html tags by ref attribute other than to use it by document.getElement....
+
+6.useReducer changes the state without using useState. Used when we have a lot of useStates and a be easily passed down to the childrens.
+
+7.useContext Allows to pass data to children without having to pass down prop  manually at every level.
+
+  parent will act as a provider and children will be consumers.
+  
+  eg...component A has a state which has a property name
+ 
+  data will be send via props like A->B->C->D
+this can be time consuming and erreos can be made 
+   
+
+ 

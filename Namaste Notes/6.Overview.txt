@@ -1,0 +1,19 @@
+1.Monolith vs MicroService Architecture.
+
+2.Fetch data from backend
+  1.app loads-> API call-> Render UI
+  2.app loads-> Render UI-> API call-> Render data
+
+  -second one is a better approach(better UX)
+
+3.useEffect
+ -useEffect(()=>{callback function},[dependency])
+ -called after component renders.
+ 
+
+4.Shimmer UI
+ -is a better way to show loading states.
+ -it mimics the layout and shapes of content.
+
+5.
+
